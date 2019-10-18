@@ -10,7 +10,8 @@ body{
 }
 header{
     text-align: center;
-    padding: 10px;
+    padding: 40px;
+    margin: 40px;
 }
 header h1::before{
     content: open-quote;
@@ -26,7 +27,7 @@ header h1::after{
     padding-top: 30px;
     padding-bottom: 30px;
     box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.5);
-    transition: all .5s ease;
+    /* transition: all .5s ease; */
 }
 .card{
     margin: 20px auto;
@@ -73,6 +74,7 @@ header h1::after{
     transition: opacity .5s ease;
     opacity: 1;
 }
+
 @keyframes animate{
     from{
         transform: rotate(0deg);

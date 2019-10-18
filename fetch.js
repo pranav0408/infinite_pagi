@@ -2,7 +2,8 @@ var container = document.querySelector('.container');
 var bookCount = 0;
 var bookCountTag = 0;
 var loader = document.querySelector('.loader')
-function fetchData(){
+var loadFlag = true;
+async function fetchData(){
     fetch( 'https://newprod.zypher.co/books/getbooksBytags',
         {
             method: 'POST',
@@ -20,6 +21,7 @@ function fetchData(){
         return response.json() ;
     })
     .then( resData => {
+        loader.style['display'] = 'none';
         var books = resData.books;
 
         for(var i=0; i < books.length; i=i+2){
@@ -65,8 +67,20 @@ function fetchData(){
     })
 }
 
-document.querySelector('.load').addEventListener('scroll',()=>{
-    
-})
-
 fetchData()
+
+$(window).scroll(function() {
+    
+    if($(window).scrollTop() ==  $(document).height()- $(window).height())
+    {   
+        if(loadFlag == true){
+            loadFlag = false;
+            fetchData()
+        }
+    }
+
+    setTimeout( ()=>{
+        loadFlag = true
+    },1000
+    )
+});
