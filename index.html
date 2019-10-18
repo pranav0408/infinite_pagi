@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./index.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <header>
+        <h1> Welcome to Infinite Pagination </h1>
+    </header>
+
+    <!-- ######################################################################## -->
+    <!-- Template for books card -->
+    <div class="container">
+        <div class="loader">
+
+        </div>
+        <!-- <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <img src="" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">title</h5>
+                        <p class="card-text author"> Author: Some name </p>
+                        <p class="card-text"> <span class="badge badge-primary"> Badge Me 1 </span> <span class="badge badge-primary"> Badge Me 2 </span> </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <img src="" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">title</h5>
+                        <p class="card-text author"> Author: Some name </p>
+                        <p class="card-text"> <span class="badge badge-primary"> Badge Me 1 </span> <span class="badge badge-primary"> Badge Me 2 </span> </p>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </div> 
+    <!-- Template Ends -->
+    <!-- ######################################################################## -->
+
+    <div class="text-center load">
+        <button class="btn btn-warning float-left" onclick="fetchData()">Load More...</button>
+        <button class="btn btn-success float-right"> <a href="#" class="top">Go to top</a> </button>
+    </div>
+
+    <script src="./fetch.js"></script>
+</body>
+</html>
